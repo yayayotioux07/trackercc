@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <meta charset="utf-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+     <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="font-italic">Chart below shows total percentage. DCA vs Mock 1</h1>
+    </div>
+    <div class="chart" style="position: relative; height:50vh; width:100vw">
+      <canvas id="myChart"></canvas>
+    </div>
+<div class="container">
+  <h1 class="font-italic">Chart below shows number of total students per test. DCA vs Mock 1</h1>
+</div>
+    <div class="chart" style="position: relative; height:50vh; width:100vw">
+      <canvas id="myChart2"></canvas>
+    </div>
+
+
+    <div class="text-center">
+      <button class="btn btn-primary" type="submit" id="notAp" onclick="notAppr()">Not Approaching</button>
+      <button class="btn btn-primary" type="submit" id="appr" onclick="approaches()">Approaches</button>
+      <button class="btn btn-primary" type="submit" id="meet" onclick="meets()">Meets</button>
+      <button class="btn btn-primary" type="submit" id="master" onclick="master()">Master</button>
+
+    </div>
+
+
+    <div class="container text-center">
+           <table class="table table-striped" id="table"data-height="300">
+              <h1 class=""style="text-align:center" id="innerText"></h1>
+             <thead class="thead-dark">
+              <th class="text-center"data-field="name">Name</th>
+              <th class="text-center"data-field="dca">DCA Score</th>
+              <th class="text-center"data-field="mock">Mock 1 Score</th>
+            </thead>
+           </table>
+
+             <div class="container"><large>©JADALabs 2020</large></div>
+
+
+             <h5></h5>
+
+           </div>
+    <!-- </div>
+    <div class="container">
+           <table class="table table-striped" id="table2"data-height="300">
+              <h1 class=""style="text-align:center">Approaches</h1>
+             <thead class="thead-dark">
+              <th data-field="name">Name</th>
+              <th data-field="dca">DCA Score</th>
+              <th data-field="mock">Mock 1 Score</th>
+            </thead>
+           </table>
+    </div>
+    <div class="container">
+           <table class="table table-striped" id="table3"data-height="300">
+              <h1 class=""style="text-align:center">Meets</h1>
+             <thead class="thead-dark">
+              <th data-field="name">Name</th>
+              <th data-field="dca">DCA Score</th>
+              <th data-field="mock">Mock 1 Score</th>
+            </thead>
+           </table>
+    </div>
+    <div class="container">
+           <table class="table table-striped" id="table4"data-height="300">
+              <h1 class=""style="text-align:center">Master</h1>
+             <thead class="thead-dark">
+              <th data-field="name">Name</th>
+              <th data-field="dca">DCA Score</th>
+              <th data-field="mock">Mock 1 Score</th>
+            </thead>
+           </table>
+    </div>
+    <h1 class=""style="text-align:center"></h1>
+
+    <!-<div class="chart" style="position: relative; height:80vh; width:100vw">
+      <canvas id="myChart3"></canvas>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="js/chartCreator.js"></script>
+    <script src="js/chartCreator2.js"></script>
+    <script src="js/chartCreator3.js"></script>
+    <!-- <script src="js/tableRetrieve.js"></script> -->
+    <script src="js/tableRetrieve2.js"></script>
+    <script src="js/tableRetrieveApproaches.js"></script>
+    <script src="js/tableMeet.js"></script>
+    <script src="js/tableMaster.js"></script>
+
+
+<!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+  </body>
+</html>
