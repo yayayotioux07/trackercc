@@ -43,6 +43,11 @@ xhttp.onreadystatechange = function() {
             labels: ['Not Approaches', 'Approaches', 'Meets', 'Masters']
         },
     options: {
+      title: {
+           display: true,
+           position: 'bottom',
+           text: 'Number of Students'
+       },
       responsive: true, // Instruct chart js to respond nicely.
       maintainAspectRatio: false, // Add to prevent default behavior of full-width/height
       scales: {
