@@ -1,12 +1,11 @@
 
 
-function notAppr  () {
+function notAppr() {
 
 var $table = $('#table');
 var myData = [];
 
-
-$.getJSON("https://spreadsheets.google.com/feeds/list/16Wb-gntqZ41PPqVqSDZbcFwqxoxJaWcFwyaOIbOyVhA/od6/public/values?alt=json", function(data) {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWndAr4Am5Hm8bekSjy8k/od6/public/values?alt=json", function(data) {
 
             myData = []; // reset whenever data loads
             var sheetData = data.feed.entry;
@@ -15,10 +14,9 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/16Wb-gntqZ41PPqVqSDZbcFwqx
             for (i = 0; i < sheetData.length; i++) {
 
                 var dataPoint = {
-                  name: data.feed.entry[i]['gsx$student']['$t'],
-                  mock: data.feed.entry[i]['gsx$mockpercent']['$t'],
-                  dca: data.feed.entry[i]['gsx$dcapercent']['$t'],
-
+                  date: data.feed.entry[i]['gsx$date']['$t'],
+                  description: data.feed.entry[i]['gsx$description']['$t'],
+                  amount: data.feed.entry[i]['gsx$amount']['$t'],
                   // clientname: data.feed.entry[i]['gsx$clientname']['$t'],
                   // delivery: data.feed.entry[i]['gsx$delivery']['$t']
                 };
@@ -49,6 +47,15 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/16Wb-gntqZ41PPqVqSDZbcFwqx
             })            ;
 });
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function approaches() {
   var $table = $('#table');

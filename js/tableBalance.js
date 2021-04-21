@@ -1,14 +1,11 @@
-var $table = $('#table4');
+
+
+function bal() {
+
+var $table = $('#table2');
 var myData = [];
 
-
-// an example function that will get the data by index so it can be used however you want
-function showDetails(index) {
-   var selectedData = myData[index];
-   alert(JSON.stringify(selectedData, null, 2));
-}
-
-$.getJSON("https://spreadsheets.google.com/feeds/list/1KkMDA84nR1CbLKe9-V3356lzEA_FJ2dXFrRuQYa1BQw/od6/public/values?alt=json", function(data) {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWndAr4Am5Hm8bekSjy8k/3/public/values?alt=json", function(data) {
 
             myData = []; // reset whenever data loads
             var sheetData = data.feed.entry;
@@ -17,10 +14,9 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1KkMDA84nR1CbLKe9-V3356lzE
             for (i = 0; i < sheetData.length; i++) {
 
                 var dataPoint = {
-                  name: data.feed.entry[i]['gsx$student']['$t'],
-                  mock: data.feed.entry[i]['gsx$mockpercent']['$t'],
-                  dca: data.feed.entry[i]['gsx$dcapercent']['$t'],
-
+                  date: data.feed.entry[i]['gsx$date']['$t'],
+                  description: data.feed.entry[i]['gsx$description']['$t'],
+                  amount: data.feed.entry[i]['gsx$amount']['$t'],
                   // clientname: data.feed.entry[i]['gsx$clientname']['$t'],
                   // delivery: data.feed.entry[i]['gsx$delivery']['$t']
                 };
@@ -44,7 +40,10 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1KkMDA84nR1CbLKe9-V3356lzE
               //   //     '</tr>');
               // });
             };
-            $('#table4').bootstrapTable({
+            $('#table2').bootstrapTable('destroy');
+
+            $('#table2').bootstrapTable({
               data: myData
             })            ;
 });
+}
