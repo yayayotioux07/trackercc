@@ -1,11 +1,11 @@
 
 
-function bal() {
+function notAppr2() {
 
-var $table = $('#table2');
+var $table = $('#table');
 var myData = [];
 
-$.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWndAr4Am5Hm8bekSjy8k/3/public/values?alt=json", function(data) {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWndAr4Am5Hm8bekSjy8k/4/public/values?alt=json", function(data) {
 
             myData = []; // reset whenever data loads
             var sheetData = data.feed.entry;
@@ -17,8 +17,6 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWn
                   date: data.feed.entry[i]['gsx$date']['$t'],
                   description: data.feed.entry[i]['gsx$description']['$t'],
                   amount: data.feed.entry[i]['gsx$amount']['$t'],
-                  may: data.feed.entry[i]['gsx$may']['$t'],
-
                   // clientname: data.feed.entry[i]['gsx$clientname']['$t'],
                   // delivery: data.feed.entry[i]['gsx$delivery']['$t']
                 };
@@ -42,10 +40,18 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWn
               //   //     '</tr>');
               // });
             };
-            $('#table2').bootstrapTable('destroy');
+            $('#table').bootstrapTable('destroy');
 
-            $('#table2').bootstrapTable({
+            $('#table').bootstrapTable({
               data: myData
             })            ;
 });
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
