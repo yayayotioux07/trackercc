@@ -18,6 +18,8 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/1yyy4_1UwDvKgAiauG53BZIIWn
                   description: data.feed.entry[i]['gsx$description']['$t'],
                   amount: data.feed.entry[i]['gsx$amount']['$t'],
                   may: data.feed.entry[i]['gsx$may']['$t'],
+                  limit: data.feed.entry[i]['gsx$limit']['$t'],
+
 
                   // clientname: data.feed.entry[i]['gsx$clientname']['$t'],
                   // delivery: data.feed.entry[i]['gsx$delivery']['$t']
